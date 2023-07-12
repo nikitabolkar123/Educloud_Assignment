@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schools in the Pincode</title>
+</head>
+<body>
+    <h1>Schools in the Pincode {{ pincode }}</h1>
+    {% if optimized_route %}
+        <h2>Optimized Route:</h2>
+        <ul>
+            {% for school in optimized_route %}
+                <li>{{ school.name }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Distances:</h2>
+        <ul>
+            {% for distance in distances %}
+                <li>{{ distance }} km</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No optimized route found.</p>
+    {% endif %}
+</body>
+</html>
+
